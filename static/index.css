@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Zapobiega jakiemukolwiek przewijaniu strony */
+  background-color: #181717; /* Kolor tła */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Pulsowany neon */
+
+.back {
+  position: relative;
+  background-color: #201f1f;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #00ff50;
+
+  animation: neon-pulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    border-color: #00cc40;
+    box-shadow:
+      0 0 4px #00cc40,
+      0 0 10px rgba(0, 255, 80, 0.6),
+      0 0 18px rgba(0, 255, 80, 0.35);
+  }
+
+  to {
+    border-color: #b6ff00;
+    box-shadow:
+      0 0 8px #00ff50,
+      0 0 20px rgba(0, 255, 80, 0.9),
+      0 0 40px rgba(0, 255, 80, 0.6),
+      0 0 65px rgba(0, 255, 80, 0.3);
+  }
+}
+
+/* Kontynuacja */
+
+.h1-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: white;
+  font-size: 3rem;
+  transform: translateY(-40px);
+}
+
+.h2-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: white;
+  font-size: 2rem;
+  transform: translateY(-15px);
+}
+
+.h3-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: white;
+  font-size: 1rem;
+  transform: translateY(25px);
+}
+
+.fa-discord {
+  color: #ffffff; /* Kolor ikony Discord */
+  font-size: 2.5rem; /* Rozmiar ikony */
+}
